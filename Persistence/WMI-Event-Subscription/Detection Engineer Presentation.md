@@ -115,25 +115,23 @@ instance of __FilterToConsumerBinding
 ```
 
 1. **Event Filter Creation:**
-```
-MOFCopy code
+```c++
 Query = "SELECT * FROM __InstanceCreationEvent WITHIN 5 WHERE TargetInstance ISA 'Win32_Process' AND TargetInstance.Name = 'notepad.exe'";
 QueryLanguage = "WQL";
 EventNamespace = "root\\cimv2";
 ```
  - This portion defines an event filter with a WQL (WMI Query Language) query that monitors for the creation of a process named **`notepad.exe`**. The query will check every 5 seconds (**`WITHIN 5`**).
 2. **Event Consumer Creation:**
-```
-MOFCopy code
+```c++
 instance of CommandLineEventConsumer as $Consumer {
 Name = "evilConsumer";
 CommandLineTemplate = "C:\\Path\\To\\MaliciousScript.bat";
 };
 ```
 - This portion defines an event consumer named "evilConsumer" that will execute the **`MaliciousScript.bat`** when triggered.
+
 3. **Binding the Event Filter to the Event Consumer:**
-```
-MOFCopy code
+```c++
 instance of __FilterToConsumerBinding {
 Filter = $Filter;
 Consumer = $Consumer;
@@ -206,7 +204,7 @@ scrcons.exe Abuse: Being the WMI Script Consumer executable, `scrcons.exe` is in
 
 ### Detection Data Model
 ![DetectionEntityRelationshipModel_Final.jpeg](DetectionEntityRelationshipModel_Final.jpeg)
-
+!TODO: Missing Key
 ## Blind Spots
 - If the adversary is utilizing a different tool to compile mof files and import them into the mof repo  
 - If the adversary is using encoded commands  
