@@ -11,7 +11,7 @@ Credit for this idea goes to SpecterOps who provided a lot of these insights and
 4. Identify Data Sources
 5. Build the Detection
 
-### Select a Target Technique
+### 1. Select a Target Technique
 Self explanatory, select a technique that has not already been captured, or set out to improve an existing presentation.
 
 *!TODO: Include MITRE ATTCK Mapping of techniques captured in this repo*
@@ -34,7 +34,7 @@ Output:
 - Possibly, a specific implementation of that technique (Procedure)
 - Document the different variations of this technique
 
-### Research Underlying Technology
+### 2. Research Underlying Technology
 Research the technology associated with the technique to help understand the use cases, related data sources, and detection opportunities
 
 Output:
@@ -43,7 +43,7 @@ Output:
 - What alternatives to this technique do attackers have?
 - What is the list of potential data sources?
 
-### Proof of Concept Malware Sample
+### 3. Proof of Concept Malware Sample
 - Build or Find a benign malware sample to allow for data source evaluation and detection validation
 
 Input:
@@ -56,7 +56,7 @@ Output:
 - Script
 - Binary
 
-### Identify Data Sources
+### 4. Identify Data Sources
 Evaluate what data sources are necessary to allow for detection of the technique  
 This step is part of a cycle with the next step (Build Atomic Detection)
 
@@ -70,7 +70,7 @@ Output:
 - List of selected data sources
 - Necessary data sources are enabled and being centralized
 
-### Build the Detection
+### 5. Build the Detection
 How would you naturally describe what you want to query?  
 What is the data index you would use (based on the data sensor)?  
 What is the event identifier (EventID)?  
@@ -99,3 +99,5 @@ Each presentation will cover the following:
 - Additional Resources
   - Any other internal, external, or technical references that may be useful for understanding the ADS
 
+## TODO
+- [ ] Create SIGMA mapping for all created detections
