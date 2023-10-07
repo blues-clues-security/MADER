@@ -61,7 +61,7 @@ event_id : 21 and "<>"
 
 ### Capability Abstraction
 
-![detection-mapping](detection-mapping.png)
+![detection-mapping](detection-mapping.PNG)
 
 ### WMI Fundamentals
 
